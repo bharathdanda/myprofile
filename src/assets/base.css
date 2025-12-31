@@ -1,0 +1,70 @@
+/* Dark theme with purple base styles */
+:root,
+[data-theme="dark"] {
+  --color-background: #0d0a14;
+  --color-background-secondary: #1a1524;
+  --color-background-card: #1f1a2e;
+  --color-text: #e0d8f0;
+  --color-text-secondary: #b0a0c0;
+  --color-text-tertiary: #d0c8e0;
+  --color-border: #2a2340;
+  --color-accent: #8b5cf6;
+  --color-accent-secondary: #a855f7;
+  --color-accent-tertiary: #9333ea;
+  --color-purple-light: #c084fc;
+  --color-purple-dark: #6b21a8;
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #9333ea 100%);
+  --gradient-hero: linear-gradient(135deg, #1e1a2e 0%, #2d1b3d 50%, #3d1f4d 100%);
+  --gradient-purple: linear-gradient(135deg, #6b21a8 0%, #8b5cf6 50%, #a855f7 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(139, 92, 246, 0.4);
+  --shadow-lg: 0 20px 60px rgba(139, 92, 246, 0.3);
+}
+
+/* Light theme with purple accents */
+[data-theme="light"] {
+  --color-background: #faf9fc;
+  --color-background-secondary: #f5f3f8;
+  --color-background-card: #ffffff;
+  --color-text: #2d1b3d;
+  --color-text-secondary: #5a4a6a;
+  --color-text-tertiary: #4a3a5a;
+  --color-border: #e8e0f0;
+  --color-accent: #8b5cf6;
+  --color-accent-secondary: #a855f7;
+  --color-accent-tertiary: #9333ea;
+  --color-purple-light: #c084fc;
+  --color-purple-dark: #6b21a8;
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #9333ea 100%);
+  --gradient-hero: linear-gradient(135deg, #ede5ff 0%, #e5d9ff 50%, #ddd0f0 100%);
+  --gradient-purple: linear-gradient(135deg, #6b21a8 0%, #8b5cf6 50%, #a855f7 100%);
+  --shadow-sm: 0 2px 8px rgba(139, 92, 246, 0.1);
+  --shadow-md: 0 4px 12px rgba(139, 92, 246, 0.2);
+  --shadow-lg: 0 20px 60px rgba(139, 92, 246, 0.15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  background: var(--color-background);
+  min-height: 100vh;
+}
