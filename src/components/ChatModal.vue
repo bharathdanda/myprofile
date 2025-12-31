@@ -107,6 +107,9 @@ function formatTime(date: Date): string {
  */
 function formatResumeContext(resume: ResumeData): string {
   let context = `Resume for ${resume.name}\n\n`
+  context += `Email: ${resume.contact.email}\n\n`
+  context += `LinkedIn: ${resume.contact.linkedin}\n\n`
+  context += `GitHub: ${resume.contact.github}\n\n`
   context += `Title: ${resume.title}\n\n`
   context += `Summary: ${resume.summary}\n\n`
   
