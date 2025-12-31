@@ -115,7 +115,7 @@ export const resumeData: ResumeData = {
   experience: [
     {
       title: 'Co-Founder and CTO',
-      company: 'Moltin AI/Packerland Ventures',
+      company: 'Moltin - A Packerland Ventures Company',
       startDate: '2022-01',
       current: true,
       logo: '/moltin-logo-white.svg',
