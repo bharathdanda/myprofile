@@ -11,8 +11,8 @@
     
     <div class="resume-sections">
       <ContactSection :contact="resumeData.contact" />
-      <SkillsSection :skills="resumeData.skills" />
       <ExperienceSection :experience="resumeData.experience" />
+      <SkillsSection :skills="resumeData.skills" />
       <EducationSection :education="resumeData.education" />
       
       <section v-if="resumeData.projects && resumeData.projects.length" class="projects-section">
@@ -65,6 +65,7 @@
     </div>
 
     <ChatModal v-model:is-open="isChatOpen" />
+    <PDFQualityModal v-model:is-open="isQualityModalOpen" @confirm="handleQualityConfirm" />
   </div>
 </template>
 
@@ -77,13 +78,23 @@ import SkillsSection from '@/components/SkillsSection.vue'
 import ExperienceSection from '@/components/ExperienceSection.vue'
 import EducationSection from '@/components/EducationSection.vue'
 import ChatModal from '@/components/ChatModal.vue'
-import { exportToPDF } from '@/utils/pdfExport'
+import PDFQualityModal from '@/components/PDFQualityModal.vue'
+import { exportToPDF, type PDFQuality } from '@/utils/pdfExport'
 
 const isChatOpen = ref(false)
+const isQualityModalOpen = ref(false)
 
-async function handleDownload() {
+function handleDownload() {
+  isQualityModalOpen.value = true
+}
+
+async function handleQualityConfirm(quality: PDFQuality) {
   try {
-    await exportToPDF('resume-content', `${resumeData.name.replace(/\s+/g, '-')}-Resume.pdf`)
+    await exportToPDF(
+      'resume-content',
+      `${resumeData.name.replace(/\s+/g, '-')}-Resume.pdf`,
+      quality
+    )
   } catch (error) {
     console.error('Error exporting PDF:', error)
     alert('Failed to export PDF. Please try again.')

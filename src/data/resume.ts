@@ -116,7 +116,7 @@ export const resumeData: ResumeData = {
     {
       title: 'Co-Founder and CTO',
       company: 'Moltin - A Packerland Ventures Company',
-      startDate: '2022-01',
+      startDate: '2023-03',
       current: true,
       logo: '/moltin-logo-white.svg',
       description: [
@@ -130,10 +130,24 @@ export const resumeData: ResumeData = {
       technologies: ['Python', 'TypeScript', 'Langgraph','DSPY/GEPA', 'Vertex AI', 'Kubernetes', 'Terraform', 'GCP', 'Azure','Gemini','Cloudflare','Langsmith','Auth0','Vanta']
     },
     {
+      title: 'Technical Architect, Platform Engineering',
+      company: 'Schneider',
+      startDate: '2022-09',
+      endDate: '2023-06',
+      logo: '/schneider_logo.png',
+      description: [
+        'Lead the vision, inception and planning for Internal Developer Platforms to improve Developer Onboarding Time, Productivity and Enforce Standards',
+        'Collaborated with and Participated in Architecture Review Board for various projects',
+        'Performed proof of value for DevEx tools such as Backstage, Github Co-pilot, Cursor, etc.',
+        'Focused on Architectural Simplification and Reduction in Total Cost of Ownership'
+      ],
+      technologies: ['Apache Kafka', 'Microsoft Azure', 'Event Based Architecture', 'Event Modeling', 'Cookie Cutter', 'Kubernetes', 'Serverless Computing', 'Platform Engineering', 'Backstage']
+    },
+    {
       title: 'Solutions and Technical Architect, Driver Pay',
       company: 'Schneider',
       startDate: '2021-05',
-      endDate: '2022-01',
+      endDate: '2023-02',
       logo: '/schneider_logo.png',
       description: [
         'Architected cloud-native real-time pay calculation system replacing legacy Oracle product',
@@ -145,10 +159,10 @@ export const resumeData: ResumeData = {
       technologies: ['Spring Boot', 'Node.js', 'React', 'Kafka', 'Kubernetes', 'KEDA', 'MongoDB', 'Azure']
     },
     {
-      title: 'Technical Architect, Driver Telematics Platform',
+      title: 'Technical Architect, Freight Power Driver',
       company: 'Schneider',
       startDate: '2019-08',
-      endDate: '2022-01',
+      endDate: '2023-10',
       logo: '/schneider_logo.png',
       description: [
         'Partnered with Startups and Vendors to drive the architecture for multi-cloud platform (AWS, Azure, GCP) and Samsung/Android devices',
